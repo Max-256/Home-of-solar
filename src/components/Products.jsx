@@ -10,7 +10,7 @@ function  Products({onAdd}) {
     const [products, setProducts] = useState([]);
     const [query, setQuery] = useState("");
     const [categories, setCategories] = useState([]);
-    const [sortColumn, setSortColumn] = useState({path: 'title', order: 'asc'}); 
+    const [sortColumn] = useState({path: 'title', order: 'asc'}); 
 
     useEffect(() => setProducts(getProducts()),[]);
     useEffect(() => setCategories(getCategories()),[]);

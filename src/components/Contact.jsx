@@ -12,7 +12,7 @@ function Contact(props) {
   };
 
   const formSchema = {
-    username: Joi.string(). required().label("Name"),
+    username: Joi.string().required().label("Name"),
     email: Joi.string().email().required().label("Email"),
     phone: Joi.number().label("Number"),
     message: Joi.string().required().label("Message"),

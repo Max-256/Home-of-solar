@@ -12,13 +12,13 @@ function Topnav({basket}) {
   const [navItems, setNavItems] = useState([]);
   const [expanded, setExpanded] = useState(false);
 
-  useEffect(() =>setNavItems(getNavItems(),[]));
+  useEffect(() =>setNavItems(getNavItems()),[]);
 
   return (
     <Navbar expanded={expanded} className="navbar" expand="lg" fixed="top" >
       <Container>
         <Link to="/">
-        <img onClick={() => setExpanded(false)} src={logo} />
+        <img onClick={() => setExpanded(false)} src={logo} alt="logo"/>
         </Link>
         <Navbar.Toggle
           onClick={() => setExpanded(expanded ? false : "expanded")}

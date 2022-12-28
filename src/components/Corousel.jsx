@@ -47,7 +47,7 @@ function Corousel(props) {
             items.map(item=> (
             <div key={item.id} className='content'>
             <Link to={`/product/${item.id}`}>
-            <img src={item.image} className="content-image" />
+            <img src={item.image} className="content-image" alt={item.title} />
             </Link>
             <div className='text-block'>
             <p className='content-text'>
